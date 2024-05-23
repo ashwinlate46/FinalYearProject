@@ -1,0 +1,19 @@
+<html>
+  <head></head>
+  <body>
+    <button onclick="clk()">Click</button>
+    <script type="">
+      const clk = () => {
+        console.log(document.hasStorageAccess());
+        document.requestStorageAccess().then(
+          () => {
+            console.log('access granted')
+          },
+          () => {
+            console.log('access denied')
+          },
+        )
+      }
+    </script>
+  </body>
+</html>
